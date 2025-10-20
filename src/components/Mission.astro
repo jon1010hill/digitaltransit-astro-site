@@ -1,0 +1,170 @@
+---
+---
+
+<section id="mission" class="mission">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our Mission</h2>
+      <p class="mission-statement">Our mission is to support a greener, safer, and more efficient future by:</p>
+    </div>
+
+    <div class="mission-grid">
+      <div class="mission-card">
+        <div class="mission-number">01</div>
+        <h3>Enabling secure, digitally driven systems</h3>
+      </div>
+
+      <div class="mission-card">
+        <div class="mission-number">02</div>
+        <h3>Supporting the UK and global industry through innovation</h3>
+      </div>
+
+      <div class="mission-card">
+        <div class="mission-number">03</div>
+        <h3>Improving quality of life through infrastructure resilience</h3>
+      </div>
+
+      <div class="mission-card">
+        <div class="mission-number">04</div>
+        <h3>Helping organisations transition into the future with confidence</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .mission {
+    padding: 6rem 0;
+    background: var(--darker-bg);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mission::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(91, 155, 173, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(74, 138, 156, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-header h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #fff 0%, #5B9BAD 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .mission-statement {
+    font-size: 1.375rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .mission-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(91, 155, 173, 0.2);
+    border-radius: 12px;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mission-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #5B9BAD, #4A8A9C);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .mission-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(91, 155, 173, 0.5);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 12px 40px rgba(91, 155, 173, 0.15);
+  }
+
+  .mission-card:hover::before {
+    opacity: 1;
+  }
+
+  .mission-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #5B9BAD, #4A8A9C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+  }
+
+  .mission-card h3 {
+    font-size: 1.25rem;
+    color: #fff;
+    line-height: 1.5;
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    .mission {
+      padding: 4rem 0;
+    }
+
+    .section-header {
+      margin-bottom: 3rem;
+    }
+
+    .mission-statement {
+      font-size: 1.125rem;
+    }
+
+    .mission-grid {
+      gap: 1.5rem;
+    }
+
+    .mission-card {
+      padding: 2rem;
+    }
+
+    .mission-number {
+      font-size: 2rem;
+    }
+  }
+</style>
