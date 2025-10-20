@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import Mission from '../components/Mission.astro';
 import Services from '../components/Services.astro';
+import Team from '../components/Team.astro';
 import { blogPosts } from '../data/blog';
 
 const latestPosts = blogPosts.slice(0, 3);
@@ -12,6 +13,7 @@ const latestPosts = blogPosts.slice(0, 3);
 	<Hero />
 	<Mission />
 	<Services />
+	<Team />
 
 	<section id="blog-preview" class="blog-preview">
 		<div class="container">

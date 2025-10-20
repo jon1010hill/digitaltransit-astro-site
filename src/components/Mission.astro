@@ -2,31 +2,96 @@
 ---
 
 <section id="mission" class="mission">
-  <div class="container">
-    <div class="section-header">
-      <h2>Our Mission</h2>
-      <p class="mission-statement">Our mission is to support a greener, safer, and more efficient future by:</p>
+  <div class="mission-hero">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <h2>Our Mission</h2>
+        <p class="mission-statement">Our mission is to support a greener, safer, and more efficient future</p>
+      </div>
     </div>
+  </div>
 
+  <div class="container">
     <div class="mission-grid">
       <div class="mission-card">
-        <div class="mission-number">01</div>
-        <h3>Enabling secure, digitally driven systems</h3>
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop" alt="Cybersecurity" />
+          <div class="image-overlay"></div>
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <span class="mission-number">01</span>
+            <div class="mission-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+          </div>
+          <h3>Enabling secure, digitally driven systems</h3>
+          <p>Delivering cutting-edge security solutions that protect critical infrastructure in an increasingly connected world.</p>
+        </div>
       </div>
 
       <div class="mission-card">
-        <div class="mission-number">02</div>
-        <h3>Supporting the UK and global industry through innovation</h3>
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop" alt="Innovation" />
+          <div class="image-overlay"></div>
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <span class="mission-number">02</span>
+            <div class="mission-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+          </div>
+          <h3>Supporting the UK and global industry through innovation</h3>
+          <p>Pioneering technological advances that drive progress and competitive advantage across sectors.</p>
+        </div>
       </div>
 
       <div class="mission-card">
-        <div class="mission-number">03</div>
-        <h3>Improving quality of life through infrastructure resilience</h3>
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&h=600&fit=crop" alt="Infrastructure" />
+          <div class="image-overlay"></div>
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <span class="mission-number">03</span>
+            <div class="mission-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+            </div>
+          </div>
+          <h3>Improving quality of life through infrastructure resilience</h3>
+          <p>Building robust systems that ensure reliable, efficient services for communities and businesses.</p>
+        </div>
       </div>
 
       <div class="mission-card">
-        <div class="mission-number">04</div>
-        <h3>Helping organisations transition into the future with confidence</h3>
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=600&fit=crop" alt="Digital Transformation" />
+          <div class="image-overlay"></div>
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <span class="mission-number">04</span>
+            <div class="mission-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+          </div>
+          <h3>Helping organisations transition into the future with confidence</h3>
+          <p>Providing expert guidance and solutions that enable seamless digital transformation.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -34,23 +99,27 @@
 
 <style>
   .mission {
-    padding: 6rem 0;
     background: var(--darker-bg);
     position: relative;
+  }
+
+  .mission-hero {
+    position: relative;
+    padding: 8rem 0 6rem;
+    background:
+      linear-gradient(135deg, rgba(91, 155, 173, 0.1), rgba(74, 138, 156, 0.05)),
+      url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=600&fit=crop') center/cover;
     overflow: hidden;
   }
 
-  .mission::before {
-    content: '';
+  .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background:
-      radial-gradient(circle at 20% 30%, rgba(91, 155, 173, 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 80% 70%, rgba(74, 138, 156, 0.05) 0%, transparent 50%);
-    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(20, 29, 41, 0.95), rgba(93, 104, 114, 0.85));
+    z-index: 1;
   }
 
   .container {
@@ -58,113 +127,194 @@
     margin: 0 auto;
     padding: 0 2rem;
     position: relative;
-    z-index: 1;
+    z-index: 2;
   }
 
-  .section-header {
+  .hero-content {
     text-align: center;
-    margin-bottom: 4rem;
+    max-width: 900px;
+    margin: 0 auto;
   }
 
-  .section-header h2 {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
+  .hero-content h2 {
+    font-size: clamp(3rem, 6vw, 5rem);
     margin-bottom: 1.5rem;
     background: linear-gradient(135deg, #fff 0%, #5B9BAD 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1;
   }
 
   .mission-statement {
-    font-size: 1.375rem;
-    color: rgba(255, 255, 255, 0.9);
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.6;
+    font-weight: 500;
     max-width: 700px;
     margin: 0 auto;
-    line-height: 1.6;
   }
 
   .mission-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    padding: 4rem 0 6rem;
   }
 
   .mission-card {
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(26, 35, 50, 0.6);
     border: 1px solid rgba(91, 155, 173, 0.2);
-    border-radius: 12px;
-    padding: 2.5rem;
-    transition: all 0.3s ease;
-    position: relative;
+    border-radius: 20px;
     overflow: hidden;
-  }
-
-  .mission-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4px;
-    height: 100%;
-    background: linear-gradient(180deg, #5B9BAD, #4A8A9C);
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    backdrop-filter: blur(10px);
   }
 
   .mission-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(91, 155, 173, 0.5);
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 12px 40px rgba(91, 155, 173, 0.15);
+    transform: translateY(-12px);
+    border-color: rgba(91, 155, 173, 0.6);
+    box-shadow: 0 20px 60px rgba(91, 155, 173, 0.25);
   }
 
-  .mission-card:hover::before {
-    opacity: 1;
+  .card-image {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+  }
+
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+
+  .mission-card:hover .card-image img {
+    transform: scale(1.1);
+  }
+
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent 0%, rgba(20, 29, 41, 0.8) 100%);
+    transition: opacity 0.4s ease;
+  }
+
+  .mission-card:hover .image-overlay {
+    opacity: 0.6;
+  }
+
+  .card-content {
+    padding: 2.5rem;
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
   }
 
   .mission-number {
     font-size: 2.5rem;
-    font-weight: 800;
+    font-weight: 900;
     background: linear-gradient(135deg, #5B9BAD, #4A8A9C);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 1rem;
-    opacity: 0.5;
+    line-height: 1;
+    letter-spacing: -0.02em;
   }
 
-  .mission-card h3 {
-    font-size: 1.25rem;
+  .mission-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #5B9BAD, #4A8A9C);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(91, 155, 173, 0.3);
+  }
+
+  .mission-card:hover .mission-icon {
+    transform: scale(1.15) rotate(8deg);
+    box-shadow: 0 8px 24px rgba(91, 155, 173, 0.5);
+  }
+
+  .mission-icon svg {
     color: #fff;
-    line-height: 1.5;
-    font-weight: 600;
+  }
+
+  .card-content h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    line-height: 1.3;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+  }
+
+  .card-content p {
+    font-size: 1.0625rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  @media (max-width: 968px) {
+    .mission-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
   }
 
   @media (max-width: 768px) {
-    .mission {
-      padding: 4rem 0;
-    }
-
-    .section-header {
-      margin-bottom: 3rem;
-    }
-
-    .mission-statement {
-      font-size: 1.125rem;
+    .mission-hero {
+      padding: 6rem 0 4rem;
     }
 
     .mission-grid {
-      gap: 1.5rem;
+      padding: 3rem 0 4rem;
     }
 
-    .mission-card {
+    .card-image {
+      height: 220px;
+    }
+
+    .card-content {
       padding: 2rem;
     }
 
     .mission-number {
       font-size: 2rem;
+    }
+
+    .mission-icon {
+      width: 42px;
+      height: 42px;
+    }
+
+    .mission-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .card-content h3 {
+      font-size: 1.25rem;
+    }
+
+    .card-content p {
+      font-size: 1rem;
     }
   }
 </style>
