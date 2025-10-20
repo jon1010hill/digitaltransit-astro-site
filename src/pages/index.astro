@@ -1,0 +1,244 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import { blogPosts } from '../data/blog';
+
+const latestPosts = blogPosts.slice(0, 3);
+---
+
+<Layout>
+	<Hero />
+	<Services />
+
+	<section id="blog-preview" class="blog-preview">
+		<div class="container">
+			<div class="section-header">
+				<h2>Latest Insights</h2>
+				<p>Expert perspectives on infrastructure technology</p>
+			</div>
+
+			<div class="blog-grid">
+				{latestPosts.map((post) => (
+					<article class="blog-card">
+						{post.imageUrl && (
+							<div class="blog-image">
+								<img src={post.imageUrl} alt={post.title} />
+							</div>
+						)}
+						<div class="blog-content">
+							<div class="blog-meta">
+								<span class="category">{post.category}</span>
+								<span class="read-time">{post.readTime}</span>
+							</div>
+							<h3>{post.title}</h3>
+							<p>{post.excerpt}</p>
+							<a href={`/blog/${post.slug}`} class="read-more">
+								Read Article
+								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<path d="M5 12h14M12 5l7 7-7 7"/>
+								</svg>
+							</a>
+						</div>
+					</article>
+				))}
+			</div>
+
+			<div class="blog-cta">
+				<a href="/blog" class="btn btn-primary">View All Articles</a>
+			</div>
+		</div>
+	</section>
+
+	<section id="contact" class="contact">
+		<div class="container">
+			<div class="contact-content">
+				<h2>Ready to Transform Your Infrastructure?</h2>
+				<p>Let's discuss how our solutions can enhance your operations</p>
+				<a href="mailto:info@digitaltransit.com" class="btn btn-primary">Get in Touch</a>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.blog-preview {
+		padding: 6rem 0;
+		background: #0a192f;
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+
+	.section-header {
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+
+	.section-header h2 {
+		font-size: clamp(2.5rem, 5vw, 3.5rem);
+		margin-bottom: 1rem;
+		background: linear-gradient(135deg, #fff 0%, #00d4ff 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.section-header p {
+		font-size: 1.25rem;
+		color: rgba(255, 255, 255, 0.7);
+	}
+
+	.blog-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		gap: 2rem;
+		margin-bottom: 3rem;
+	}
+
+	.blog-card {
+		background: rgba(255, 255, 255, 0.05);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: 12px;
+		overflow: hidden;
+		transition: all 0.3s ease;
+	}
+
+	.blog-card:hover {
+		transform: translateY(-8px);
+		border-color: rgba(0, 212, 255, 0.5);
+		box-shadow: 0 12px 40px rgba(0, 212, 255, 0.2);
+	}
+
+	.blog-image {
+		width: 100%;
+		height: 220px;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.blog-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.3s ease;
+	}
+
+	.blog-card:hover .blog-image img {
+		transform: scale(1.05);
+	}
+
+	.blog-content {
+		padding: 2rem;
+	}
+
+	.blog-meta {
+		display: flex;
+		gap: 1rem;
+		margin-bottom: 1rem;
+		font-size: 0.875rem;
+	}
+
+	.category {
+		color: #00d4ff;
+		font-weight: 600;
+	}
+
+	.read-time {
+		color: rgba(255, 255, 255, 0.6);
+	}
+
+	.blog-card h3 {
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+		color: #fff;
+		line-height: 1.3;
+	}
+
+	.blog-card p {
+		color: rgba(255, 255, 255, 0.8);
+		line-height: 1.6;
+		margin-bottom: 1.5rem;
+	}
+
+	.read-more {
+		color: #00d4ff;
+		text-decoration: none;
+		font-weight: 600;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		transition: gap 0.3s ease;
+	}
+
+	.read-more:hover {
+		gap: 0.75rem;
+	}
+
+	.blog-cta {
+		text-align: center;
+	}
+
+	.btn {
+		padding: 1rem 2.5rem;
+		font-size: 1.125rem;
+		font-weight: 600;
+		text-decoration: none;
+		border-radius: 8px;
+		transition: all 0.3s ease;
+		display: inline-block;
+	}
+
+	.btn-primary {
+		background: linear-gradient(135deg, #00d4ff, #0099ff);
+		color: #fff;
+		box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+	}
+
+	.btn-primary:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);
+	}
+
+	.contact {
+		padding: 6rem 0;
+		background: linear-gradient(135deg, #112240 0%, #1a365d 100%);
+	}
+
+	.contact-content {
+		text-align: center;
+		max-width: 700px;
+		margin: 0 auto;
+	}
+
+	.contact-content h2 {
+		font-size: clamp(2rem, 4vw, 3rem);
+		margin-bottom: 1rem;
+		color: #fff;
+	}
+
+	.contact-content p {
+		font-size: 1.25rem;
+		color: rgba(255, 255, 255, 0.8);
+		margin-bottom: 2rem;
+	}
+
+	@media (max-width: 768px) {
+		.blog-preview,
+		.contact {
+			padding: 4rem 0;
+		}
+
+		.section-header {
+			margin-bottom: 3rem;
+		}
+
+		.blog-grid {
+			gap: 1.5rem;
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

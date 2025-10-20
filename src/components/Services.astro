@@ -1,0 +1,177 @@
+---
+---
+
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our Services</h2>
+      <p>Cutting edge solutions founded on years of experience</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        <h3>OT Cybersecurity</h3>
+        <p>AI-powered cybersecurity solutions include CyRail, with built-in compliance assessment for OT environments, and REDGE, designed for advanced threat detection—alongside expert-led training.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+          </svg>
+        </div>
+        <h3>Condition Monitoring</h3>
+        <p>LLM-powered condition monitoring solutions use AI to analyze equipment data in real time, predicting faults early and enabling proactive maintenance.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </div>
+        <h3>Safety-Critical Software Assessment</h3>
+        <p>RAPORS: an AI-powered model for robust safety assessment, complemented by expert consultancy to ensure compliance and risk mitigation.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+        </div>
+        <h3>Intelligent Transportation Systems</h3>
+        <p>Focus on enhancing mobility, safety, and operational efficiency through integrated, real-time technologies and data-driven solutions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .services {
+    padding: 6rem 0;
+    background: linear-gradient(180deg, #141d29 0%, #1a2332 100%);
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-header h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #fff 0%, #5B9BAD 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .section-header p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .service-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(91, 155, 173, 0.1) 0%, rgba(74, 138, 156, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(91, 155, 173, 0.5);
+    box-shadow: 0 12px 40px rgba(91, 155, 173, 0.2);
+  }
+
+  .service-card:hover::before {
+    opacity: 1;
+  }
+
+  .service-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #5B9BAD, #4A8A9C);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .service-icon svg {
+    color: #fff;
+  }
+
+  .service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+  }
+
+  .service-card p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (max-width: 768px) {
+    .services {
+      padding: 4rem 0;
+    }
+
+    .section-header {
+      margin-bottom: 3rem;
+    }
+
+    .services-grid {
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      padding: 2rem;
+    }
+  }
+</style>

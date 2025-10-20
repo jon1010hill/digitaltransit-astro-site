@@ -1,0 +1,85 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Digital Transit - Advancing Infrastructure Technology Systems',
+  description = 'Pioneers in cybersecurity, AI, condition monitoring, and safety-critical software for modern infrastructure and mission-critical environments.'
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<Header />
+		<main>
+			<slot />
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style is:global>
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+	:root {
+		--primary-teal: #5B9BAD;
+		--primary-dark-gray: #5D6872;
+		--dark-bg: #1a2332;
+		--darker-bg: #141d29;
+		--light-teal: #7DB5C4;
+		--accent-teal: #4A8A9C;
+	}
+
+	html {
+		font-family: 'Inter', system-ui, -apple-system, sans-serif;
+		background: var(--darker-bg);
+		color: #fff;
+		scroll-behavior: smooth;
+	}
+
+	body {
+		margin: 0;
+		width: 100%;
+		min-height: 100vh;
+		line-height: 1.5;
+	}
+
+	main {
+		padding-top: 80px;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		line-height: 1.2;
+		font-weight: 700;
+	}
+
+	a {
+		color: var(--primary-teal);
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+</style>

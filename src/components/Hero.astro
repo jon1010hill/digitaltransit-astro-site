@@ -1,0 +1,224 @@
+---
+---
+
+<section class="hero">
+  <div class="video-background">
+    <video autoplay muted loop playsinline>
+      <source src="/dt.webm" type="video/webm">
+    </video>
+  </div>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <div class="container">
+      <h1>Advancing Infrastructure Technology Systems</h1>
+      <p class="hero-subtitle">
+        Pioneers in cybersecurity, AI, condition monitoring, and safety-critical software for modern infrastructure and mission-critical environments.
+      </p>
+      <div class="hero-cta">
+        <a href="#services" class="btn btn-primary">Our Services</a>
+        <a href="/blog" class="btn btn-secondary">Read Our Blog</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <span></span>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 29, 41, 0.7);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    background: linear-gradient(135deg, #fff 0%, #5B9BAD 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fadeInUp 1s ease-out;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInUp 1s ease-out 0.2s both;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1.25rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 1s ease-out 0.4s both;
+  }
+
+  .btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #5B9BAD, #4A8A9C);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(91, 155, 173, 0.3);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(91, 155, 173, 0.4);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .btn-secondary:hover {
+    border-color: #5B9BAD;
+    background: rgba(91, 155, 173, 0.1);
+    transform: translateY(-3px);
+  }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    animation: fadeIn 1s ease-out 1s both;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .scroll-indicator span {
+    display: block;
+    width: 24px;
+    height: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    position: relative;
+  }
+
+  .scroll-indicator span::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 2px;
+    animation: scroll 2s infinite;
+  }
+
+  @keyframes scroll {
+    0% {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-50%) translateY(16px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      min-height: 500px;
+    }
+
+    .hero-content {
+      padding: 1.5rem;
+    }
+
+    .btn {
+      padding: 0.875rem 2rem;
+      font-size: 1rem;
+    }
+
+    .scroll-indicator {
+      bottom: 1rem;
+    }
+  }
+</style>

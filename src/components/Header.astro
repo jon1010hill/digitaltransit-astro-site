@@ -1,0 +1,137 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<header>
+  <nav>
+    <div class="container">
+      <a href="/" class="logo">
+        <img src="/Digital-Transit-Header.png" alt="Digital Transit" class="logo-img" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="/" class={currentPath === '/' ? 'active' : ''}>Home</a></li>
+        <li><a href="/blog" class={currentPath.startsWith('/blog') ? 'active' : ''}>Blog</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact" class="cta-button">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<style>
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(20, 29, 41, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(91, 155, 173, 0.2);
+  }
+
+  nav {
+    padding: 1.25rem 0;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .logo-img {
+    height: 40px;
+    width: auto;
+    transition: transform 0.2s ease;
+  }
+
+  .logo:hover .logo-img {
+    transform: scale(1.05);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+
+  .nav-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+    position: relative;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: #fff;
+  }
+
+  .nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #5B9BAD, #4A8A9C);
+  }
+
+  .cta-button {
+    background: linear-gradient(135deg, #5B9BAD, #4A8A9C);
+    padding: 0.625rem 1.5rem !important;
+    border-radius: 6px;
+    font-weight: 600 !important;
+    color: #fff !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(91, 155, 173, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 1.25rem;
+    }
+
+    .logo-img {
+      height: 32px;
+    }
+
+    .nav-links {
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      font-size: 0.875rem;
+    }
+
+    .cta-button {
+      padding: 0.5rem 1rem !important;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .nav-links {
+      display: none;
+    }
+  }
+</style>
