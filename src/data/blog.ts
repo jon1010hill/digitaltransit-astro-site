@@ -2,6 +2,61 @@ import type { BlogPost } from '../types';
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'iso-27001-certification-recommendation',
+    title: 'Digital Transit Receives Recommendation for ISO 27001 Certification for Information Security Management',
+    excerpt: 'We are proud to announce that Digital Transit has received a recommendation for ISO 27001 certification, demonstrating our commitment to world-class information security standards.',
+    content: `
+# Digital Transit Receives Recommendation for ISO 27001 Certification for Information Security Management
+
+We are thrilled to announce that Digital Transit has received a recommendation for ISO 27001 certification, marking a significant milestone in our commitment to delivering secure, reliable solutions for critical infrastructure.
+
+## What is ISO 27001?
+
+ISO 27001 is the international standard for information security management systems (ISMS). It provides a systematic approach to managing sensitive company information, ensuring it remains secure through people, processes, and technology controls.
+
+## Why This Matters
+
+For organizations working with critical infrastructure, safety-critical systems, and sensitive operational technology environments, information security isn't just a priority—it's essential. This certification recommendation validates that Digital Transit has implemented comprehensive security controls that meet internationally recognized best practices.
+
+## Our Journey to Certification
+
+Achieving this recommendation required:
+
+- **Comprehensive Risk Assessment**: Identifying and evaluating information security risks across all our operations
+- **Security Control Implementation**: Deploying robust technical, physical, and organizational security measures
+- **Policy Development**: Establishing clear information security policies and procedures
+- **Staff Training**: Ensuring our entire team understands their role in maintaining security
+- **Continuous Monitoring**: Implementing ongoing security monitoring and improvement processes
+
+## What This Means for Our Clients
+
+This certification recommendation demonstrates that when you work with Digital Transit, you're partnering with an organization that:
+
+- Takes information security seriously at every level
+- Follows industry best practices for protecting sensitive data
+- Maintains rigorous security controls and procedures
+- Regularly audits and improves security measures
+- Complies with international security standards
+
+## Our Commitment to Security
+
+Information security has always been fundamental to our work on projects like CyRail, REDGE, and RAPORS. This ISO 27001 recommendation reinforces our dedication to protecting the critical infrastructure systems our clients depend on.
+
+## Looking Forward
+
+While receiving this recommendation is a significant achievement, we view it as a foundation for continuous improvement. We remain committed to maintaining and enhancing our information security management system to meet the evolving challenges of protecting critical infrastructure in an increasingly connected world.
+
+We extend our gratitude to our team members whose dedication made this achievement possible, and to our clients who trust us with their most critical systems.
+
+For more information about our security practices or to discuss how we can support your organization's security needs, please contact us at info@digitaltransit.com.
+    `,
+    author: 'Digital Transit Team',
+    publishedAt: '2025-10-21',
+    category: 'Company News',
+    readTime: '4 min read',
+    imageUrl: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=630&fit=crop'
+  },
+  {
     slug: 'ai-infrastructure-monitoring',
     title: 'AI-Powered Infrastructure Monitoring: The Future of Predictive Maintenance',
     excerpt: 'Explore how artificial intelligence is revolutionizing infrastructure monitoring and enabling predictive maintenance strategies.',

@@ -8,12 +8,30 @@ const currentPath = Astro.url.pathname;
       <a href="/" class="logo">
         <img src="/Digital-Transit-Header.png" alt="Digital Transit" class="logo-img" />
       </a>
-      <ul class="nav-links">
-        <li><a href="/" class={currentPath === '/' ? 'active' : ''}>Home</a></li>
-        <li><a href="/blog" class={currentPath.startsWith('/blog') ? 'active' : ''}>Blog</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact" class="cta-button">Contact Us</a></li>
-      </ul>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="/" class={currentPath === '/' ? 'active' : ''}>Home</a></li>
+          <li><a href="/blog" class={currentPath.startsWith('/blog') ? 'active' : ''}>Blog</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact" class="cta-button">Contact Us</a></li>
+        </ul>
+        <button class="theme-toggle" aria-label="Toggle theme">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
     </div>
   </nav>
 </header>
@@ -25,9 +43,10 @@ const currentPath = Astro.url.pathname;
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(20, 29, 41, 0.95);
+    background: var(--overlay-bg);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(91, 155, 173, 0.2);
+    border-bottom: 1px solid var(--card-border);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
   }
 
   nav {
@@ -41,6 +60,12 @@ const currentPath = Astro.url.pathname;
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
   }
 
   .logo {
@@ -70,7 +95,7 @@ const currentPath = Astro.url.pathname;
   }
 
   .nav-links a {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-secondary);
     text-decoration: none;
     font-weight: 500;
     font-size: 0.95rem;
@@ -80,7 +105,7 @@ const currentPath = Astro.url.pathname;
 
   .nav-links a:hover,
   .nav-links a.active {
-    color: #fff;
+    color: var(--text-primary);
   }
 
   .nav-links a.active::after {
@@ -105,6 +130,60 @@ const currentPath = Astro.url.pathname;
   .cta-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(91, 155, 173, 0.3);
+  }
+
+  .theme-toggle {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+    width: 42px;
+    height: 42px;
+  }
+
+  .theme-toggle:hover {
+    border-color: var(--primary-teal);
+    background: rgba(91, 155, 173, 0.1);
+  }
+
+  .theme-toggle svg {
+    position: absolute;
+    transition: all 0.3s ease;
+  }
+
+  .sun-icon {
+    opacity: 0;
+    transform: rotate(180deg) scale(0);
+  }
+
+  .moon-icon {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+
+  :root[data-theme="light"] .sun-icon {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+
+  :root[data-theme="light"] .moon-icon {
+    opacity: 0;
+    transform: rotate(-180deg) scale(0);
+  }
+
+  :root[data-theme="light"] .theme-toggle {
+    border-color: rgba(26, 35, 50, 0.2);
+  }
+
+  :root[data-theme="light"] .theme-toggle:hover {
+    border-color: var(--primary-teal);
+    background: rgba(91, 155, 173, 0.1);
   }
 
   @media (max-width: 768px) {
@@ -133,5 +212,24 @@ const currentPath = Astro.url.pathname;
     .nav-links {
       display: none;
     }
+
+    .theme-toggle {
+      width: 38px;
+      height: 38px;
+    }
   }
 </style>
+
+<script>
+  // Theme toggle button functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.querySelector('.theme-toggle');
+
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        const event = new CustomEvent('themeToggle');
+        document.dispatchEvent(event);
+      });
+    }
+  });
+</script>

@@ -32,6 +32,31 @@ const {
 			<slot />
 		</main>
 		<Footer />
+
+		<script>
+			// Theme switching logic
+			function initTheme() {
+				const root = document.documentElement;
+				const savedTheme = localStorage.getItem('theme');
+				const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+				const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+				root.setAttribute('data-theme', theme);
+			}
+
+			// Initialize theme immediately to prevent flash
+			initTheme();
+
+			// Listen for theme toggle events
+			document.addEventListener('themeToggle', (e: any) => {
+				const root = document.documentElement;
+				const currentTheme = root.getAttribute('data-theme');
+				const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+				root.setAttribute('data-theme', newTheme);
+				localStorage.setItem('theme', newTheme);
+			});
+		</script>
 	</body>
 </html>
 
@@ -45,17 +70,53 @@ const {
 	:root {
 		--primary-teal: #5B9BAD;
 		--primary-dark-gray: #5D6872;
-		--dark-bg: #1a2332;
-		--darker-bg: #141d29;
 		--light-teal: #7DB5C4;
 		--accent-teal: #4A8A9C;
+
+		/* Dark theme (default) */
+		--dark-bg: #1a2332;
+		--darker-bg: #141d29;
+		--text-primary: #ffffff;
+		--text-secondary: rgba(255, 255, 255, 0.8);
+		--text-tertiary: rgba(255, 255, 255, 0.7);
+		--card-bg: rgba(255, 255, 255, 0.05);
+		--card-border: rgba(91, 155, 173, 0.2);
+		--overlay-bg: rgba(20, 29, 41, 0.95);
+	}
+
+	:root[data-theme="light"] {
+		/* Light theme */
+		--dark-bg: #f0f4f8;
+		--darker-bg: #ffffff;
+		--text-primary: #1a2332;
+		--text-secondary: #2d3748;
+		--text-tertiary: #4a5568;
+		--card-bg: #ffffff;
+		--card-border: rgba(91, 155, 173, 0.3);
+		--overlay-bg: rgba(240, 244, 248, 0.95);
+	}
+
+	/* Light mode card shadows */
+	:root[data-theme="light"] .service-card,
+	:root[data-theme="light"] .mission-card,
+	:root[data-theme="light"] .team-card,
+	:root[data-theme="light"] .blog-card {
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+	}
+
+	:root[data-theme="light"] .service-card:hover,
+	:root[data-theme="light"] .mission-card:hover,
+	:root[data-theme="light"] .team-card:hover,
+	:root[data-theme="light"] .blog-card:hover {
+		box-shadow: 0 8px 24px rgba(91, 155, 173, 0.2);
 	}
 
 	html {
 		font-family: 'Inter', system-ui, -apple-system, sans-serif;
 		background: var(--darker-bg);
-		color: #fff;
+		color: var(--text-primary);
 		scroll-behavior: smooth;
+		transition: background-color 0.3s ease, color 0.3s ease;
 	}
 
 	body {
