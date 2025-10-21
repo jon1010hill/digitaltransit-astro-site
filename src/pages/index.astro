@@ -209,7 +209,8 @@ const latestPosts = blogPosts.slice(0, 3);
 
 	.contact {
 		padding: 6rem 0;
-		background: linear-gradient(135deg, #1a2332 0%, #5D6872 100%);
+		background: linear-gradient(135deg, var(--dark-bg) 0%, var(--primary-dark-gray) 100%);
+		transition: background 0.3s ease;
 	}
 
 	.contact-content {
@@ -228,6 +229,11 @@ const latestPosts = blogPosts.slice(0, 3);
 		font-size: 1.25rem;
 		color: var(--text-secondary);
 		margin-bottom: 2rem;
+	}
+
+	/* Ensure text is always readable in contact section */
+	:root[data-theme="light"] .contact {
+		background: linear-gradient(135deg, #e8f1f5 0%, #b8cfd8 100%);
 	}
 
 	@media (max-width: 768px) {
