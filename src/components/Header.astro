@@ -8,12 +8,19 @@ const currentPath = Astro.url.pathname;
       <a href="/" class="logo">
         <img src="/Digital-Transit-Header.png" alt="Digital Transit" class="logo-img" />
       </a>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <div class="nav-right">
         <ul class="nav-links">
           <li><a href="/" class={currentPath === '/' ? 'active' : ''}>Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#rd">R&D</a></li>
+          <li><a href="#team">Team</a></li>
           <li><a href="/blog" class={currentPath.startsWith('/blog') ? 'active' : ''}>Blog</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact" class="cta-button">Contact Us</a></li>
+          <li><a href="#contact" class="cta-button">Contact</a></li>
         </ul>
         <button class="theme-toggle" aria-label="Toggle theme">
           <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -186,6 +193,37 @@ const currentPath = Astro.url.pathname;
     background: rgba(91, 155, 173, 0.1);
   }
 
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 2px;
+    background: var(--text-primary);
+    transition: all 0.3s ease;
+    border-radius: 2px;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
   @media (max-width: 768px) {
     .container {
       padding: 0 1.25rem;
@@ -209,8 +247,52 @@ const currentPath = Astro.url.pathname;
   }
 
   @media (max-width: 600px) {
+    .hamburger {
+      display: flex;
+    }
+
     .nav-links {
-      display: none;
+      position: fixed;
+      top: 73px;
+      left: 0;
+      right: 0;
+      background: var(--overlay-bg);
+      backdrop-filter: blur(10px);
+      flex-direction: column;
+      gap: 0;
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid var(--card-border);
+      transform: translateY(-100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .nav-links li {
+      width: 100%;
+      text-align: center;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .nav-links li:last-child {
+      border-bottom: none;
+    }
+
+    .nav-links a {
+      display: block;
+      font-size: 1rem;
+    }
+
+    .cta-button {
+      margin-top: 0.5rem;
     }
 
     .theme-toggle {
@@ -229,6 +311,26 @@ const currentPath = Astro.url.pathname;
       themeToggle.addEventListener('click', () => {
         const event = new CustomEvent('themeToggle');
         document.dispatchEvent(event);
+      });
+    }
+
+    // Mobile hamburger menu functionality
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+      });
+
+      // Close menu when clicking on a link
+      const links = navLinks.querySelectorAll('a');
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navLinks.classList.remove('active');
+        });
       });
     }
   });

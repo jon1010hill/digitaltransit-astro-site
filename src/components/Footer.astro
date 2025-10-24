@@ -12,26 +12,6 @@ const currentYear = new Date().getFullYear();
       </div>
 
       <div class="footer-section">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="#cybersecurity">Cybersecurity Solutions</a></li>
-          <li><a href="#ai">AI & Machine Learning</a></li>
-          <li><a href="#monitoring">Condition Monitoring</a></li>
-          <li><a href="#software">Safety-Critical Software</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-section">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#careers">Careers</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-section">
         <h4>Connect</h4>
         <ul>
           <li><a href="#linkedin">LinkedIn</a></li>
@@ -39,14 +19,23 @@ const currentYear = new Date().getFullYear();
           <li><a href="mailto:info@digitaltransit.com">info@digitaltransit.com</a></li>
         </ul>
       </div>
+
+      <div class="footer-section certifications">
+        <h4>Certifications</h4>
+        <div class="cert-logos">
+          <img src="/wp-media/2024/ISO-Kitemark.png" alt="ISO 9001 Certified" />
+          <img src="/wp-media/2021/Cyber-Essentials-Certified.png" alt="Cyber Essentials Certified" />
+        </div>
+      </div>
+    </div>
+
+    <div class="company-details">
+      <p>Company Registration Number - 8564033</p>
+      <p>VAT Number - GB 164720708</p>
     </div>
 
     <div class="footer-bottom">
       <p>&copy; {currentYear} Digital Transit. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="#privacy">Privacy Policy</a>
-        <a href="#terms">Terms of Service</a>
-      </div>
     </div>
   </div>
 </footer>
@@ -119,28 +108,44 @@ const currentYear = new Date().getFullYear();
     color: var(--primary-teal);
   }
 
-  .footer-bottom {
+  .cert-logos {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 1.5rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .cert-logos img {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.9;
+  }
+
+  .cert-logos img:hover {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+
+  .company-details {
+    text-align: center;
+    padding: 2rem 0;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--card-border);
+  }
+
+  .company-details p {
+    color: var(--text-tertiary);
+    font-size: 0.875rem;
+    margin: 0.25rem 0;
+  }
+
+  .footer-bottom {
+    text-align: center;
     padding-top: 2rem;
     border-top: 1px solid var(--card-border);
     font-size: 0.875rem;
-  }
-
-  .footer-links {
-    display: flex;
-    gap: 2rem;
-  }
-
-  .footer-links a {
-    color: var(--text-tertiary);
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-
-  .footer-links a:hover {
-    color: var(--primary-teal);
   }
 
   @media (max-width: 768px) {
@@ -150,16 +155,20 @@ const currentYear = new Date().getFullYear();
 
     .footer-grid {
       gap: 2rem;
+      grid-template-columns: 1fr;
     }
 
-    .footer-bottom {
-      flex-direction: column;
+    .cert-logos {
+      justify-content: flex-start;
       gap: 1rem;
-      text-align: center;
     }
 
-    .footer-links {
-      gap: 1.5rem;
+    .cert-logos img {
+      height: 60px;
+    }
+
+    .company-details {
+      padding: 1.5rem 0;
     }
   }
 </style>

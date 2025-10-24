@@ -2,160 +2,203 @@ import type { BlogPost } from '../types';
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: 'iso-27001-certification-recommendation',
-    title: 'Digital Transit Receives Recommendation for ISO 27001 Certification for Information Security Management',
-    excerpt: 'We are proud to announce that Digital Transit has received a recommendation for ISO 27001 certification, demonstrating our commitment to world-class information security standards.',
+    slug: 'uk-rail-engagement-peru-chile',
+    title: 'Building on UK Rail Engagement in Peru and Chile',
+    excerpt: 'Digital Transit presented CyRail® and RAPORS technologies to Latin American stakeholders during a UK Department for Business and Trade trade mission focused on rail modernization.',
     content: `
-# Digital Transit Receives Recommendation for ISO 27001 Certification for Information Security Management
+# Building on UK Rail Engagement in Peru and Chile
 
-We are thrilled to announce that Digital Transit has received a recommendation for ISO 27001 certification, marking a significant milestone in our commitment to delivering secure, reliable solutions for critical infrastructure.
+Digital Transit Ltd recently completed a trade mission to Peru and Chile where leadership presented the company's flagship safety and cybersecurity technologies to regional infrastructure stakeholders. The initiative, organized by the UK Department for Business and Trade from June 30–July 4, 2025, positioned DTL's solutions within Latin America's expanding rail modernization efforts.
 
-## What is ISO 27001?
+## Key Technologies Presented
 
-ISO 27001 is the international standard for information security management systems (ISMS). It provides a systematic approach to managing sensitive company information, ensuring it remains secure through people, processes, and technology controls.
+CEO Howard Parkinson showcased two primary offerings:
 
-## Why This Matters
+**CyRail®** — An operational technology cybersecurity platform aligned with TS 50701 and IEC 63452 standards, designed to strengthen compliance across metro, freight, and passenger rail systems.
 
-For organizations working with critical infrastructure, safety-critical systems, and sensitive operational technology environments, information security isn't just a priority—it's essential. This certification recommendation validates that Digital Transit has implemented comprehensive security controls that meet internationally recognized best practices.
+**RAPORS** — An AI-enabled assessment system for safety-critical software that automates safety-critical software assessment and compliance checks, potentially reducing safety case documentation timeframes by approximately 40%.
 
-## Our Journey to Certification
+## Market Relevance
 
-Achieving this recommendation required:
+Both solutions address specific infrastructure challenges in Peru and Chile, where rail systems require enhanced operational resilience and regulatory adherence. The technologies are undergoing pilot evaluations in Singapore, Hong Kong, and the UK.
 
-- **Comprehensive Risk Assessment**: Identifying and evaluating information security risks across all our operations
-- **Security Control Implementation**: Deploying robust technical, physical, and organizational security measures
-- **Policy Development**: Establishing clear information security policies and procedures
-- **Staff Training**: Ensuring our entire team understands their role in maintaining security
-- **Continuous Monitoring**: Implementing ongoing security monitoring and improvement processes
+## Future Plans
 
-## What This Means for Our Clients
+DTL intends to return in October 2025 for additional discussions centered on critical infrastructure cybersecurity, alongside other UK technology innovators.
 
-This certification recommendation demonstrates that when you work with Digital Transit, you're partnering with an organization that:
-
-- Takes information security seriously at every level
-- Follows industry best practices for protecting sensitive data
-- Maintains rigorous security controls and procedures
-- Regularly audits and improves security measures
-- Complies with international security standards
-
-## Our Commitment to Security
-
-Information security has always been fundamental to our work on projects like CyRail, REDGE, and RAPORS. This ISO 27001 recommendation reinforces our dedication to protecting the critical infrastructure systems our clients depend on.
-
-## Looking Forward
-
-While receiving this recommendation is a significant achievement, we view it as a foundation for continuous improvement. We remain committed to maintaining and enhancing our information security management system to meet the evolving challenges of protecting critical infrastructure in an increasingly connected world.
-
-We extend our gratitude to our team members whose dedication made this achievement possible, and to our clients who trust us with their most critical systems.
-
-For more information about our security practices or to discuss how we can support your organization's security needs, please contact us at info@digitaltransit.com.
+For more information, please contact us at info@digitaltransit.co.uk.
     `,
     author: 'Digital Transit Team',
-    publishedAt: '2025-10-21',
-    category: 'Company News',
-    readTime: '4 min read',
-    imageUrl: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=630&fit=crop'
+    publishedAt: '2025-07-16',
+    category: 'General News',
+    readTime: '3 min read',
+    imageUrl: 'https://www.digitaltransit.co.uk/wp-content/uploads/2025/07/image-3.png'
   },
   {
-    slug: 'ai-infrastructure-monitoring',
-    title: 'AI-Powered Infrastructure Monitoring: The Future of Predictive Maintenance',
-    excerpt: 'Explore how artificial intelligence is revolutionizing infrastructure monitoring and enabling predictive maintenance strategies.',
+    slug: 'eulynx-deep-dive-security-course',
+    title: 'EULYNX Deep Dive Security Course',
+    excerpt: 'Director completed EULYNX Academy certification, enhancing team expertise in standardized railway signalling system interfaces and interoperability.',
     content: `
-# AI-Powered Infrastructure Monitoring: The Future of Predictive Maintenance
+# EULYNX Deep Dive Security Course
 
-Artificial intelligence is transforming how we monitor and maintain critical infrastructure. By leveraging machine learning algorithms and real-time data analysis, organizations can now predict potential failures before they occur.
+Digital Transit Limited announced that director Howard Parkinson successfully completed the EULYNX Deep Dive course and obtained official certification from the EULYNX Academy.
 
-## The Challenge
+## Overview
 
-Traditional infrastructure monitoring relies on scheduled inspections and reactive maintenance. This approach often leads to unexpected downtime and costly emergency repairs.
+This achievement not only highlights Howard's commitment to excellence in railway signalling but also reinforces our team's capabilities in delivering modern, standards-based signalling solutions.
 
-## The AI Solution
+## About EULYNX
 
-Modern AI-powered systems continuously analyze sensor data, identifying patterns that indicate potential issues. This enables maintenance teams to take proactive action, reducing downtime and extending asset lifespan.
+EULYNX represents a European consortium of infrastructure managers collaborating to standardize railway signalling system interfaces and architecture. Their objective centers on making signalling systems more modular, interoperable, and sustainable across Europe.
 
-## Key Benefits
+## Course Content
 
-- **Reduced Downtime**: Predict failures before they occur
-- **Cost Savings**: Optimize maintenance schedules
-- **Extended Asset Life**: Address issues early
-- **Data-Driven Decisions**: Make informed investment choices
+The Deep Dive training covers experienced professionals' needs with theoretical and practical components, including:
 
-The future of infrastructure management is here, and it's powered by AI.
+- Core architecture and system design principles
+- Subsystem interface specification
+- Development workflows and simulation tools
+- Communication protocols and interface modeling
+- Cybersecurity architecture and risk analysis
+- National requirements integration within the EULYNX framework
+
+## Strategic Significance
+
+The certification strengthens Digital Transit's internal expertise in signalling specification, enhances compliance capabilities with EULYNX Baseline standards, advances cybersecurity knowledge within signalling domains, and demonstrates commitment to next-generation infrastructure solutions.
     `,
     author: 'Digital Transit Team',
-    publishedAt: '2025-10-15',
-    category: 'AI & Technology',
+    publishedAt: '2025-07-09',
+    category: 'General News',
+    readTime: '3 min read',
+    imageUrl: 'https://www.digitaltransit.co.uk/wp-content/uploads/2025/07/image-1.png'
+  },
+  {
+    slug: 'why-compliance-matters-ts50701-iec62443',
+    title: 'Why Compliance Matters: TS 50701 and IEC 62443 for Rail',
+    excerpt: 'Understanding TS 50701 and IEC 62443 standards, their application in rail operations, and consequences of non-compliance including cyber incidents.',
+    content: `
+# Why Compliance Matters: Breaking Down TS 50701 and IEC 62443 for Rail Operators
+
+The rail industry faces mounting pressure to defend critical infrastructure against cyber threats while maintaining safety and reliability. Digital Transit Limited addresses this challenge by explaining two essential compliance standards.
+
+## CENELEC TS 50701 Overview
+
+TS 50701 is a Technical Specification from the European Committee for Electrotechnical Standardization (2021) designed specifically for railway cybersecurity. The standard encompasses:
+
+- Risk assessments for cybersecurity
+- Security level assignments (SL1–SL4)
+- Asset inventory protocols
+- Vulnerability management procedures
+- Supplier security expectations
+- Integration with RAMS processes
+
+Railway Infrastructure Managers, operators, system integrators, and product suppliers must apply this standard across the full lifecycle, from concept through decommissioning.
+
+## IEC 62443 Explained
+
+IEC 62443 is a globally applicable cybersecurity standard developed by the ISA99 committee. It addresses industrial control systems across manufacturing, utilities, and transportation sectors.
+
+The standard introduces Zone and Conduit Modelling, requiring organizations to define sensitive asset locations and data flow pathways between them. Security levels (SL1-SL4) determine protection requirements based on criticality and exposure.
+
+## Consequences of Non-Compliance
+
+Real-world incidents demonstrate the risks:
+
+- Deutsche Bahn experienced WannaCry ransomware affecting train signage (2017)
+- Merseyrail suffered a ransomware attack with data leakage (2021)
+
+Beyond incidents, non-compliance creates barriers to funding, fails audits, and exposes organizations to legal liability under frameworks like the EU NIS2 Directive.
+
+## Digital Transit Solutions
+
+**CyRail** automates TS 50701 and IEC 62443 compliance through gap analysis dashboards, document verification, lifecycle tracking, and evidence generation for auditors.
+
+**RAPORS** addresses EN 50716 and EN 50128 requirements with automated risk analysis, SIL-level traceability, and software safety case development.
+
+## Future Outlook
+
+Over the next five years, expectations include TS 50701 evolution into a full standard, IEC 62443 becoming mandatory for procurement, integrated cybersecurity-safety frameworks, and AI-powered automated assurance tools.
+    `,
+    author: 'Digital Transit Team',
+    publishedAt: '2025-06-25',
+    category: 'General News',
     readTime: '5 min read',
-    imageUrl: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    imageUrl: 'https://www.digitaltransit.co.uk/wp-content/uploads/2023/02/DTL-logp.jpg'
   },
   {
-    slug: 'cybersecurity-critical-infrastructure',
-    title: 'Cybersecurity Best Practices for Critical Infrastructure',
-    excerpt: 'Essential cybersecurity measures to protect mission-critical infrastructure from modern threats.',
+    slug: 'cybersecurity-urgent-need-railway-industry',
+    title: 'Cybersecurity in Rail: The Urgent Need for Protection',
+    excerpt: 'Recent rail cyberattacks across Ukraine, Poland, and Denmark highlight industry challenges and the need for comprehensive OT security solutions.',
     content: `
-# Cybersecurity Best Practices for Critical Infrastructure
+# Cybersecurity in Rail: The Urgent Need for Protection in the Railway Industry
 
-In an increasingly connected world, protecting critical infrastructure from cyber threats is more important than ever. Here are the essential practices every organization should implement.
+The rail sector faces mounting digital transformation challenges. As systems become increasingly interconnected, the industry confronts expanded vulnerabilities that threaten operational continuity.
 
-## Understanding the Threat Landscape
+## Recent Cybersecurity Incidents
 
-Critical infrastructure faces unique cybersecurity challenges. From nation-state actors to ransomware attacks, the threats are diverse and constantly evolving.
+Several significant attacks demonstrate the growing threat:
 
-## Core Security Principles
+- **March 2025 (Ukraine):** Ukrzaliznytsia experienced disruptions affecting both passenger and freight transport, forcing reversion to manual ticketing
+- **Scotland:** Railway infrastructure remains under-prepared for sophisticated threats, with vulnerabilities in digitally-controlled signaling systems
+- **October 2022 (Denmark):** DSB operator faced widespread cancellations traced to a single point of failure triggered cascade across systems
+- **August 2023 (Poland):** 20 trains halted via VHF radio system exploitation; resolution required six hours
+- **December 2023 (Poland):** Supply chain software malfunction caused denial-of-service disruptions
 
-1. **Zero Trust Architecture**: Never trust, always verify
-2. **Defense in Depth**: Multiple layers of security
-3. **Continuous Monitoring**: Real-time threat detection
-4. **Incident Response Planning**: Be prepared for breaches
+## Industry Challenges
 
-## Implementation Strategy
+Five critical obstacles emerge:
 
-Success requires a comprehensive approach that combines technology, processes, and people. Regular security audits and employee training are just as important as technical controls.
+1. **Expanding threat surface** through interconnected systems lacking original cybersecurity design
+2. **Fragmented standards** creating regulatory complexity and implementation inconsistencies
+3. **Skill gaps** in specialized OT cybersecurity expertise
+4. **Integration risks** across unsecured multi-source applications
+5. **Cultural resistance** to secure-by-design adoption
 
-Protecting critical infrastructure is an ongoing journey, not a destination.
+## CyRail AI Solution
+
+Digital Transit Limited promotes CyRail, an AI-powered platform offering:
+
+- Real-time threat monitoring with live vulnerability databases
+- Automated compliance documentation against IEC 62443, TS 50701, NIS2, and IEC 63452
+- Integration with Enterprise Architect and internal repositories
+- Built-in workforce training programs
+- Context-specific cybersecurity guidance through retrieval-augmented generation
+
+The platform addresses the unique security requirements of operational technology in rail environments, helping organizations protect critical infrastructure while maintaining compliance with industry standards.
     `,
     author: 'Digital Transit Team',
-    publishedAt: '2025-10-10',
-    category: 'Cybersecurity',
-    readTime: '6 min read',
-    imageUrl: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    publishedAt: '2025-05-07',
+    category: 'General News',
+    readTime: '5 min read',
+    imageUrl: 'https://www.digitaltransit.co.uk/wp-content/uploads/2025/05/6d637483-2759-4e9d-8094-26a226f96045.png'
   },
   {
-    slug: 'condition-monitoring-systems',
-    title: 'Advanced Condition Monitoring Systems for Industrial Applications',
-    excerpt: 'How modern condition monitoring systems are enhancing operational efficiency and safety in industrial environments.',
+    slug: 'cyber-essentials-certification-2025',
+    title: 'Digital Transit Achieves Fourth Consecutive Cyber Essentials Certification',
+    excerpt: 'Company announces fourth consecutive year of UK government-backed Cyber Essentials certification and announces ISO 27001 pursuit.',
     content: `
-# Advanced Condition Monitoring Systems for Industrial Applications
+# Digital Transit Achieves Fourth Consecutive Cyber Essentials Certification
 
-Condition monitoring has evolved from simple vibration analysis to sophisticated multi-sensor systems that provide comprehensive asset health insights.
+Digital Transit Limited has achieved its fourth consecutive year of Cyber Essentials certification. The company emphasizes that safeguarding our clients' data and maintaining robust cybersecurity standards are at the core of everything we do.
 
-## What is Condition Monitoring?
+## Why This Certification Matters
 
-Condition monitoring involves continuously tracking the operational status of equipment to detect anomalies and predict failures.
+Cyber Essentials is a UK government-backed program helping organizations defend against prevalent cyber attacks. Maintaining this certification reflects the company's dedication to protecting its infrastructure while building client trust.
 
-## Modern Technologies
+## Future Plans: ISO 27001
 
-Today's systems combine:
-- Vibration analysis
-- Thermal imaging
-- Acoustic monitoring
-- Oil analysis
-- Electrical signature analysis
+Beyond Cyber Essentials, Digital Transit is pursuing ISO 27001 certification, described as the international gold standard for information security management. This broader framework encompasses risk management, staff training, and continuous monitoring—going beyond technical controls alone.
 
-## Benefits for Industry
+## Commitment Statement
 
-Organizations implementing advanced condition monitoring report:
-- 30-40% reduction in maintenance costs
-- 70% decrease in unplanned downtime
-- Improved worker safety
-- Better asset utilization
+The organization states their achievement demonstrates unwavering commitment to cybersecurity excellence, emphasizing that trust must be earned through maintaining the highest protective standards.
 
-The ROI of implementing these systems typically occurs within the first year.
+For more information, visit www.digitaltransit.co.uk or contact us at info@digitaltransit.co.uk.
     `,
     author: 'Digital Transit Team',
-    publishedAt: '2025-10-05',
-    category: 'Condition Monitoring',
-    readTime: '4 min read',
-    imageUrl: 'https://images.pexels.com/photos/256219/pexels-photo-256219.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    publishedAt: '2025-05-21',
+    category: 'General News',
+    readTime: '2 min read',
+    imageUrl: 'https://www.digitaltransit.co.uk/wp-content/uploads/2025/05/Screenshot-2025-05-20-135035.png'
   }
 ];
